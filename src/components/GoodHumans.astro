@@ -5,10 +5,13 @@ import Button from "./Button.astro";
 <section class="border-y-[6px] border-dark-alt bg-cream mt-[60px] md:mt-[100px]" id="about">
   <div class="max-w-[1440px] mx-auto px-5 md:px-[40px] py-[30px] md:py-[51px]">
     <div class="flex flex-col md:flex-row gap-[40px] md:gap-[134px]">
-      <!-- Photo -->
-      <div class="w-full md:w-[555px] h-[400px] md:h-[1020px] rounded-[6px] overflow-hidden flex-shrink-0">
-        <div class="w-full h-full bg-teal/30 flex items-center justify-center">
-          <span class="font-tight text-[20px] md:text-[24px] uppercase text-dark/50">JP & Nick Photo</span>
+      <!-- Photos -->
+      <div class="w-full md:w-[555px] flex-shrink-0 flex flex-col gap-[16px]">
+        <div class="h-[200px] md:h-[500px] rounded-[6px] overflow-hidden">
+          <img src="/images/jp.png" alt="Jarred Percival — Director & Senior Financial Adviser at Prosper" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="h-[200px] md:h-[500px] rounded-[6px] overflow-hidden">
+          <img src="/images/nick.png" alt="Nick Kwant — Head of Growth & Strategy at Prosper" class="w-full h-full object-cover object-top" />
         </div>
       </div>
 
