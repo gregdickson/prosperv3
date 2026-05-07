@@ -1,0 +1,32 @@
+---
+import Button from "./Button.astro";
+---
+
+<nav class="max-w-[1440px] mx-auto px-[40px] pt-[41px] pb-0">
+  <div class="flex items-center justify-between h-[68px]">
+    <!-- Logo icon -->
+    <div class="w-[64px] h-[48px]">
+      <div class="w-[64px] h-[48px] bg-dark rounded-full flex items-end justify-center text-cream text-[24px] font-tight">
+        <!-- Placeholder logo - replace with actual SVG -->
+        <svg viewBox="0 0 64 48" class="w-full h-full" fill="none">
+          <circle cx="20" cy="18" r="8" fill="#1c1b19" />
+          <circle cx="44" cy="18" r="8" fill="#1c1b19" />
+          <circle cx="20" cy="18" r="3" fill="#fefbeb" />
+          <circle cx="44" cy="18" r="3" fill="#fefbeb" />
+          <path d="M18 36 Q32 48 46 36" stroke="#1c1b19" stroke-width="4" fill="none" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Nav links -->
+    <div class="flex items-center gap-[72px]">
+      <a href="#how-it-works" class="font-tight text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">how it works</a>
+      <a href="#health-check" class="font-tight text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">health check</a>
+      <a href="#who-we-help" class="font-tight text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">who we help</a>
+      <a href="#about" class="font-tight text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">about prosper</a>
+      <a href="#resources" class="font-tight text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">resources</a>
+    </div>
+
+    <Button label="BOOK A REVIEW" href="#book" />
+  </div>
+</nav>

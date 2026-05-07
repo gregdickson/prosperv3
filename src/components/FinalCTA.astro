@@ -1,0 +1,30 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="max-w-[1440px] mx-auto px-[40px] mt-[100px] mb-[100px]">
+  <div class="bg-pink rounded-[6px] px-[115px] py-[76px] text-center">
+    <h2 class="font-tight text-[96px] leading-[106px] uppercase text-dark mb-[105px]">
+      Give your KiwiSaver a proper once-over.
+    </h2>
+    <p class="font-tight text-[48px] leading-[55px] uppercase text-dark max-w-[1130px] mx-auto mb-[80px]">
+      It does not need to be complicated, and it does not need to take forever. A quick check now could help you feel a whole lot clearer about what you have and what to do next.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex items-center justify-center gap-[100px]">
+      <Button label="CHECK MY FUND" href="#health-check" />
+      <!-- Center icon -->
+      <div class="w-[64px] h-[48px]">
+        <svg viewBox="0 0 64 48" class="w-full h-full" fill="none">
+          <circle cx="20" cy="18" r="8" fill="#1c1b19" />
+          <circle cx="44" cy="18" r="8" fill="#1c1b19" />
+          <circle cx="20" cy="18" r="3" fill="#fefbeb" />
+          <circle cx="44" cy="18" r="3" fill="#fefbeb" />
+          <path d="M18 36 Q32 48 46 36" stroke="#1c1b19" stroke-width="4" fill="none" stroke-linecap="round" />
+        </svg>
+      </div>
+      <Button label="BOOK A REVIEW" href="#book" />
+    </div>
+  </div>
+</section>

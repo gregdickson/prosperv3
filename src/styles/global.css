@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* ── Fonts ── */
+@font-face {
+  font-family: "Agrandir Tight";
+  src: url("/fonts/Agrandir-Tight.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir Narrow";
+  src: url("/fonts/Agrandir-Narrow.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir Regular";
+  src: url("/fonts/Agrandir-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir TextBold";
+  src: url("/fonts/Agrandir-TextBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir GrandHeavy";
+  src: url("/fonts/Agrandir-GrandHeavy.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Design Tokens ── */
+@theme {
+  /* Colors */
+  --color-cream: #fefbeb;
+  --color-dark: #1c1b19;
+  --color-dark-alt: #1e1d19;
+  --color-yellow: #fff33e;
+  --color-blue: #82cbee;
+  --color-teal: #3a9daa;
+  --color-orange: #f47c3c;
+  --color-green: #4a9e7a;
+  --color-pink: #e88ab4;
+  --color-navy: #3a4899;
+
+  /* Fonts */
+  --font-tight: "Agrandir Tight", sans-serif;
+  --font-narrow: "Agrandir Narrow", sans-serif;
+  --font-regular: "Agrandir Regular", sans-serif;
+  --font-bold: "Agrandir TextBold", sans-serif;
+  --font-heavy: "Agrandir GrandHeavy", sans-serif;
+
+  /* Spacing */
+  --spacing-page: 40px;
+  --spacing-content: 1360px;
+}
+
+/* ── Base ── */
+body {
+  font-family: var(--font-tight);
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Utility: all-caps text used throughout ── */
+.text-upper {
+  text-transform: uppercase;
+}

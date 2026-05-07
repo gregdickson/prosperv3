@@ -1,0 +1,36 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="max-w-[1440px] mx-auto px-[40px]">
+  <!-- Main headline -->
+  <h1 class="font-tight text-[120px] leading-[104px] uppercase text-dark text-center mt-[120px] mb-[80px] tracking-[-2px]">
+    KIWISAVER: SORTED
+  </h1>
+
+  <!-- Sub-copy -->
+  <div class="max-w-[1130px] mx-auto text-center mb-[80px]">
+    <p class="font-tight text-[48px] leading-[55px] uppercase text-dark">
+      Unlock the opportunity in your KiwiSaver with clear advice, no jargon, and a plan built to perform.
+    </p>
+    <p class="font-tight text-[48px] leading-[55px] uppercase text-dark mt-[55px]">
+      In two minutes, you can get a quick read on whether your KiwiSaver is doing what it should — and what to do next if it's not.
+    </p>
+  </div>
+
+  <!-- CTAs -->
+  <div class="flex items-center justify-between max-w-[1130px] mx-auto">
+    <Button label="CHECK MY FUND" href="#health-check" />
+    <!-- Center logo icon -->
+    <div class="w-[64px] h-[48px]">
+      <svg viewBox="0 0 64 48" class="w-full h-full" fill="none">
+        <circle cx="20" cy="18" r="8" fill="#1c1b19" />
+        <circle cx="44" cy="18" r="8" fill="#1c1b19" />
+        <circle cx="20" cy="18" r="3" fill="#fefbeb" />
+        <circle cx="44" cy="18" r="3" fill="#fefbeb" />
+        <path d="M18 36 Q32 48 46 36" stroke="#1c1b19" stroke-width="4" fill="none" stroke-linecap="round" />
+      </svg>
+    </div>
+    <Button label="BOOK A REVIEW" href="#book" />
+  </div>
+</section>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  label: string;
+  href?: string;
+  variant?: "dark" | "outline";
+}
+const { label, href = "#", variant = "dark" } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    "inline-flex items-center justify-center rounded-[6px] px-9 h-[68px] font-tight text-[30px] uppercase leading-normal whitespace-nowrap transition-opacity hover:opacity-80",
+    variant === "dark" && "bg-dark text-yellow",
+    variant === "outline" && "border-[3px] border-dark text-dark",
+  ]}
+>
+  {label}
+</a>

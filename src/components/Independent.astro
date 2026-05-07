@@ -1,0 +1,48 @@
+---
+const badges = [
+  { label: "FMA Registered" },
+  { label: "100% Independent" },
+  { label: "Free reviews" },
+];
+---
+
+<section class="max-w-[1440px] mx-auto px-[40px] mt-[100px]">
+  <!-- Heading -->
+  <div class="max-w-[1130px] mx-auto mb-[107px] px-[115px]">
+    <h2 class="font-tight text-[96px] leading-[106px] uppercase text-dark mb-[107px]">
+      Independent. Free to review. Properly qualified.
+    </h2>
+    <p class="font-tight text-[48px] leading-[55px] uppercase text-dark">
+      Everything we do is built to be straightforward, transparent, and in your corner.
+    </p>
+  </div>
+
+  <!-- Badges row -->
+  <div class="flex items-center justify-between max-w-[1335px] mx-auto mb-[131px]">
+    {badges.map((badge, i) => (
+      <div class="flex items-center gap-[83px]">
+        {i > 0 && (
+          <div class="w-[64px] h-[48px]">
+            <svg viewBox="0 0 64 48" class="w-full h-full" fill="none">
+              <circle cx="20" cy="18" r="8" fill="#1c1b19" />
+              <circle cx="44" cy="18" r="8" fill="#1c1b19" />
+              <circle cx="20" cy="18" r="3" fill="#fefbeb" />
+              <circle cx="44" cy="18" r="3" fill="#fefbeb" />
+              <path d="M18 36 Q32 48 46 36" stroke="#1c1b19" stroke-width="4" fill="none" stroke-linecap="round" />
+            </svg>
+          </div>
+        )}
+        <span class="font-tight text-[36px] leading-[46px] uppercase text-dark">
+          {badge.label}
+        </span>
+      </div>
+    ))}
+  </div>
+
+  <!-- Image -->
+  <div class="w-full h-[686px] rounded-[6px] overflow-hidden">
+    <div class="w-full h-full bg-teal/20 flex items-center justify-center">
+      <span class="font-tight text-[24px] uppercase text-dark/50">Landscape photo placeholder</span>
+    </div>
+  </div>
+</section>

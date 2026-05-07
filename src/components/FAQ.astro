@@ -1,0 +1,49 @@
+---
+const questions = [
+  "What makes Prosper different from other KiwiSaver advisers?",
+  "How much does it cost?",
+  "Are you actually independent?",
+  "How long does the whole thing take?",
+  "Will I lose money switching providers?",
+  "I'm saving for my first home — can you help?",
+];
+---
+
+<section class="max-w-[1440px] mx-auto px-[40px] mt-[100px]">
+  <!-- Heading -->
+  <div class="max-w-[1130px] mx-auto mb-[100px] px-[115px]">
+    <h2 class="font-tight text-[96px] leading-[106px] uppercase text-dark mb-[65px]">
+      A few fair questions
+    </h2>
+    <p class="font-tight text-[48px] leading-[55px] uppercase text-dark">
+      KiwiSaver can feel like one of those things people mean to sort "soon." So here are a few of the common questions we get, answered properly.
+    </p>
+  </div>
+
+  <!-- Accordion -->
+  <div class="space-y-0">
+    {questions.map((q) => (
+      <details class="group border-b border-dark/20">
+        <summary class="flex items-center justify-between py-[12px] cursor-pointer list-none">
+          <span class="font-tight text-[42px] leading-[55px] uppercase text-dark pr-[40px]">
+            {q}
+          </span>
+          <svg
+            class="w-[24px] h-[24px] flex-shrink-0 transition-transform group-open:rotate-180"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </summary>
+        <div class="pb-[24px]">
+          <p class="font-tight text-[24px] leading-[36px] text-dark/70 max-w-[1000px]">
+            Answer content goes here. This will be populated with the actual FAQ answers.
+          </p>
+        </div>
+      </details>
+    ))}
+  </div>
+</section>
