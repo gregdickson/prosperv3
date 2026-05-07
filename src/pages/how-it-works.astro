@@ -3,52 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Button from '../components/Button.astro';
 import Footer from '../components/Footer.astro';
-
-const steps = [
-  {
-    number: "1",
-    title: "Check my fund (2 minutes)",
-    description: "Answer 4 quick questions about your age, goals, provider, and fund type. No jargon, no account logins needed. We'll give you instant personalised insights right there and then.",
-    details: [
-      "Your age range and life stage",
-      "First home buyer status",
-      "Current provider and fund type",
-      "Instant insight based on your answers",
-    ],
-  },
-  {
-    number: "2",
-    title: "Strategy review (the first pump)",
-    description: "This is where most advisers skip ahead. We start with your strategy — because being in the right fund type matters more than being with the right brand.",
-    details: [
-      "Contribution rate — are you getting max employer match?",
-      "PIR tax rate — heaps of people overpay and don't know it",
-      "Fund type alignment for your age, goals, and timeline",
-      "First home withdrawal planning (if applicable)",
-    ],
-  },
-  {
-    number: "3",
-    title: "Provider comparison (the second pump)",
-    description: "Once your strategy is sorted, we compare every provider in the market to find the one that fits. No affiliations, no bias — just the numbers.",
-    details: [
-      "Returns after fees across all providers",
-      "Fund options that match your strategy",
-      "Platform quality and service",
-    ],
-  },
-  {
-    number: "4",
-    title: "Personalised recommendation",
-    description: "We come back to you with a clear, jargon-free recommendation. If a switch makes sense, we'll explain exactly why. If you're already in a good spot, we'll tell you that too.",
-    details: [
-      "Clear recommendation with plain-English reasoning",
-      "Projected retirement savings or first home deposit amount",
-      "No obligation — it's your call",
-      "We handle the switch paperwork if you decide to move",
-    ],
-  },
-];
 ---
 
 <Layout title="How It Works — Prosper">
@@ -66,37 +20,186 @@ const steps = [
     </div>
   </section>
 
-  <!-- Steps -->
-  <section class="max-w-[1440px] mx-auto px-5 md:px-[40px] mb-[60px] md:mb-[100px]">
-    <div class="max-w-[900px] mx-auto">
-      {steps.map((step, i) => (
-        <div class="flex gap-[20px] md:gap-[40px] mb-[40px] md:mb-[60px]">
-          <div class="flex flex-col items-center">
-            <div class="w-[48px] h-[48px] md:w-[64px] md:h-[64px] rounded-full bg-dark flex items-center justify-center flex-shrink-0">
-              <span class="font-tight text-[24px] md:text-[32px] text-yellow uppercase">{step.number}</span>
-            </div>
-            {i < steps.length - 1 && (
-              <div class="w-[3px] flex-1 bg-dark/20 mt-[16px]"></div>
-            )}
-          </div>
-          <div class="pb-[20px] md:pb-[40px]">
-            <h3 class="font-tight text-[24px] md:text-[36px] leading-[1.15] uppercase text-dark mb-[12px] md:mb-[20px]">
-              {step.title}
-            </h3>
-            <p class="font-tight text-[18px] md:text-[24px] leading-[1.3] uppercase text-dark mb-[16px] md:mb-[24px]">
-              {step.description}
-            </p>
-            <ul class="space-y-[8px] md:space-y-[12px]">
-              {step.details.map((detail) => (
-                <li class="flex items-start gap-[10px]">
-                  <span class="font-tight text-[16px] md:text-[20px] text-dark mt-[2px]">-</span>
-                  <span class="font-tight text-[16px] md:text-[20px] leading-[1.3] uppercase text-dark/70">{detail}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+  <!-- The Double Pump explained -->
+  <section class="max-w-[1440px] mx-auto px-5 md:px-[40px] mb-[40px] md:mb-[60px]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-[18px]">
+      <div class="bg-cream border-[6px] border-dark rounded-[6px] px-6 md:px-[55px] py-[40px] md:py-[59px] text-center">
+        <div class="w-[80px] h-[80px] md:w-[120px] md:h-[120px] mx-auto mb-[24px] md:mb-[40px] rounded-full border-[6px] border-dark flex items-center justify-center">
+          <span class="font-tight text-[32px] md:text-[48px] uppercase text-dark">1</span>
         </div>
-      ))}
+        <h3 class="font-tight text-[24px] md:text-[32px] lg:text-[40px] leading-[1.15] uppercase text-dark mb-[12px] md:mb-[20px]">
+          The first pump
+        </h3>
+        <p class="font-tight text-[18px] md:text-[24px] leading-[1.3] uppercase text-dark">
+          We get to know you: where you're at, what matters to you, and where your KiwiSaver might need work. Strategy first.
+        </p>
+      </div>
+      <div class="bg-cream border-[6px] border-dark rounded-[6px] px-6 md:px-[55px] py-[40px] md:py-[59px] text-center">
+        <div class="w-[80px] h-[80px] md:w-[120px] md:h-[120px] mx-auto mb-[24px] md:mb-[40px] rounded-full border-[6px] border-dark flex items-center justify-center">
+          <span class="font-tight text-[32px] md:text-[48px] uppercase text-dark">2</span>
+        </div>
+        <h3 class="font-tight text-[24px] md:text-[32px] lg:text-[40px] leading-[1.15] uppercase text-dark mb-[12px] md:mb-[20px]">
+          The second pump
+        </h3>
+        <p class="font-tight text-[18px] md:text-[24px] leading-[1.3] uppercase text-dark">
+          Once the strategy is clear, we compare every provider in the market to find the one that fits. No affiliations, no bias.
+        </p>
+      </div>
+    </div>
+    <div class="bg-teal rounded-[6px] px-6 md:px-[60px] py-[24px] md:py-[36px] text-center mt-[18px]">
+      <p class="font-tight text-[20px] md:text-[28px] lg:text-[36px] leading-[1.3] uppercase text-dark">
+        Strategy first, provider second. Simple idea — changes everything.
+      </p>
+    </div>
+  </section>
+
+  <!-- Image break -->
+  <section class="max-w-[1440px] mx-auto px-5 md:px-[40px] mb-[40px] md:mb-[60px]">
+    <div class="w-full h-[200px] md:h-[400px] rounded-[6px] overflow-hidden">
+      <img src="/images/nz-mountains.jpg" alt="Looking out over New Zealand mountains at sunset" class="w-full h-full object-cover" />
+    </div>
+  </section>
+
+  <!-- Step-by-step detail -->
+  <section class="border-y-[6px] border-dark-alt bg-cream mb-[60px] md:mb-[100px]">
+    <div class="max-w-[1440px] mx-auto px-5 md:px-[40px] py-[40px] md:py-[76px]">
+      <h2 class="font-tight text-[36px] md:text-[48px] lg:text-[64px] leading-[1.1] uppercase text-dark mb-[40px] md:mb-[60px] text-center">
+        How it plays out
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-[24px] md:gap-[30px] max-w-[1200px] mx-auto">
+        <!-- Step 1 -->
+        <div class="bg-white border-[3px] border-dark-alt rounded-[6px] p-6 md:p-10">
+          <div class="flex items-center gap-[16px] mb-[16px] md:mb-[24px]">
+            <div class="w-[48px] h-[48px] md:w-[56px] md:h-[56px] rounded-full bg-dark flex items-center justify-center flex-shrink-0">
+              <span class="font-tight text-[24px] md:text-[28px] text-yellow">1</span>
+            </div>
+            <h3 class="font-tight text-[22px] md:text-[28px] leading-[1.15] uppercase text-dark">
+              Check my fund
+            </h3>
+          </div>
+          <p class="font-tight text-[16px] md:text-[20px] leading-[1.3] uppercase text-dark mb-[16px]">
+            Answer 4 quick questions about your age, goals, provider, and fund type. No jargon, no account logins needed. Instant personalised insights.
+          </p>
+          <ul class="space-y-[8px]">
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">Your age range and life stage</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">First home buyer status</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">Current provider and fund type</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">Instant insight based on your answers</span>
+            </li>
+          </ul>
+          <p class="font-tight text-[14px] md:text-[16px] uppercase text-dark/50 mt-[16px]">Takes about 2 minutes</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white border-[3px] border-dark-alt rounded-[6px] p-6 md:p-10">
+          <div class="flex items-center gap-[16px] mb-[16px] md:mb-[24px]">
+            <div class="w-[48px] h-[48px] md:w-[56px] md:h-[56px] rounded-full bg-dark flex items-center justify-center flex-shrink-0">
+              <span class="font-tight text-[24px] md:text-[28px] text-yellow">2</span>
+            </div>
+            <h3 class="font-tight text-[22px] md:text-[28px] leading-[1.15] uppercase text-dark">
+              Strategy review
+            </h3>
+          </div>
+          <p class="font-tight text-[16px] md:text-[20px] leading-[1.3] uppercase text-dark mb-[16px]">
+            This is where most advisers skip ahead. We start with your strategy — because being in the right fund type matters more than being with the right brand.
+          </p>
+          <ul class="space-y-[8px]">
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">Contribution rate — are you getting max employer match?</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">PIR tax rate — heaps of people overpay and don't know it</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">Fund type alignment for your age, goals, and timeline</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">First home withdrawal planning (if applicable)</span>
+            </li>
+          </ul>
+          <p class="font-tight text-[14px] md:text-[16px] uppercase text-dark/50 mt-[16px]">The first pump</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white border-[3px] border-dark-alt rounded-[6px] p-6 md:p-10">
+          <div class="flex items-center gap-[16px] mb-[16px] md:mb-[24px]">
+            <div class="w-[48px] h-[48px] md:w-[56px] md:h-[56px] rounded-full bg-dark flex items-center justify-center flex-shrink-0">
+              <span class="font-tight text-[24px] md:text-[28px] text-yellow">3</span>
+            </div>
+            <h3 class="font-tight text-[22px] md:text-[28px] leading-[1.15] uppercase text-dark">
+              Provider comparison
+            </h3>
+          </div>
+          <p class="font-tight text-[16px] md:text-[20px] leading-[1.3] uppercase text-dark mb-[16px]">
+            Once your strategy is sorted, we compare every provider in the market to find the one that fits. No affiliations, no bias — just the numbers.
+          </p>
+          <ul class="space-y-[8px]">
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">Returns after fees across all providers</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">Fund options that match your strategy</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">Platform quality and service</span>
+            </li>
+          </ul>
+          <p class="font-tight text-[14px] md:text-[16px] uppercase text-dark/50 mt-[16px]">The second pump</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white border-[3px] border-dark-alt rounded-[6px] p-6 md:p-10">
+          <div class="flex items-center gap-[16px] mb-[16px] md:mb-[24px]">
+            <div class="w-[48px] h-[48px] md:w-[56px] md:h-[56px] rounded-full bg-dark flex items-center justify-center flex-shrink-0">
+              <span class="font-tight text-[24px] md:text-[28px] text-yellow">4</span>
+            </div>
+            <h3 class="font-tight text-[22px] md:text-[28px] leading-[1.15] uppercase text-dark">
+              Your recommendation
+            </h3>
+          </div>
+          <p class="font-tight text-[16px] md:text-[20px] leading-[1.3] uppercase text-dark mb-[16px]">
+            We come back to you with a clear, jargon-free recommendation. If a switch makes sense, we'll explain exactly why. If you're already sorted, we'll tell you that too.
+          </p>
+          <ul class="space-y-[8px]">
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">Clear recommendation with plain-English reasoning</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">Projected retirement savings or first home deposit</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">No obligation — it's your call</span>
+            </li>
+            <li class="flex items-start gap-[10px]">
+              <span class="font-tight text-[16px] md:text-[18px] text-dark mt-[2px]">-</span>
+              <span class="font-tight text-[16px] md:text-[18px] leading-[1.3] uppercase text-dark/70">We handle the switch paperwork if you decide to move</span>
+            </li>
+          </ul>
+          <p class="font-tight text-[14px] md:text-[16px] uppercase text-dark/50 mt-[16px]">The result</p>
+        </div>
+      </div>
     </div>
   </section>
 
