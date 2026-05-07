@@ -15,28 +15,28 @@ const stats = [
 ];
 ---
 
-<section class="max-w-[1440px] mx-auto px-[40px] mt-[100px]">
+<section class="max-w-[1440px] mx-auto px-5 md:px-[40px] mt-[60px] md:mt-[100px]">
   <!-- Blue background panel -->
-  <div class="bg-blue rounded-[6px] px-[115px] py-[76px] text-center">
-    <h2 class="font-tight text-[96px] leading-[106px] uppercase text-dark mb-[94px]">
+  <div class="bg-blue rounded-[6px] px-6 md:px-[60px] lg:px-[115px] py-[40px] md:py-[76px] text-center">
+    <h2 class="font-tight text-[40px] md:text-[64px] lg:text-[96px] leading-[1.1] uppercase text-dark mb-[40px] md:mb-[94px]">
       KiwiSaver is too important to leave on autopilot.
     </h2>
-    <p class="font-tight text-[48px] leading-[55px] uppercase text-dark max-w-[1130px] mx-auto">
+    <p class="font-tight text-[22px] md:text-[36px] lg:text-[48px] leading-[1.15] uppercase text-dark max-w-[1130px] mx-auto">
       Unlock the opportunity in your KiwiSaver with clear advice, no jargon, and a plan built to perform.
     </p>
-    <p class="font-tight text-[48px] leading-[55px] uppercase text-dark max-w-[1130px] mx-auto mt-[55px]">
+    <p class="font-tight text-[22px] md:text-[36px] lg:text-[48px] leading-[1.15] uppercase text-dark max-w-[1130px] mx-auto mt-[30px] md:mt-[55px]">
       In two minutes, you can get a quick read on whether your KiwiSaver is doing what it should — and what to do next if it's not.
     </p>
   </div>
 
   <!-- Stat cards -->
-  <div class="grid grid-cols-3 gap-[20px] mt-[22px]">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px] mt-[22px]">
     {stats.map((stat) => (
-      <div class="bg-white border-[6px] border-dark rounded-[6px] px-[40px] py-[138px] text-center">
-        <p class="font-narrow text-[110px] leading-[55px] uppercase text-blue tracking-[-1.1px] mb-[104px]">
+      <div class="bg-white border-[6px] border-dark rounded-[6px] px-6 md:px-[40px] py-[60px] md:py-[138px] text-center">
+        <p class="font-narrow text-[64px] md:text-[80px] lg:text-[110px] leading-[1] uppercase text-blue tracking-[-1.1px] mb-[40px] md:mb-[104px]">
           {stat.number}
         </p>
-        <p class="font-tight text-[36px] leading-[46px] uppercase text-dark whitespace-pre-line">
+        <p class="font-tight text-[22px] md:text-[28px] lg:text-[36px] leading-[1.3] uppercase text-dark whitespace-pre-line">
           {stat.text}
         </p>
       </div>

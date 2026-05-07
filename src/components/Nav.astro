@@ -2,31 +2,56 @@
 import Button from "./Button.astro";
 ---
 
-<nav class="max-w-[1440px] mx-auto px-[40px] pt-[41px] pb-0">
-  <div class="flex items-center justify-between h-[68px]">
+<nav class="max-w-[1440px] mx-auto px-5 md:px-[40px] pt-5 md:pt-[41px] pb-0">
+  <div class="flex items-center justify-between h-[48px] md:h-[68px]">
     <!-- Logo icon -->
-    <div class="w-[64px] h-[48px]">
-      <div class="w-[64px] h-[48px] bg-dark rounded-full flex items-end justify-center text-cream text-[24px] font-tight">
-        <!-- Placeholder logo - replace with actual SVG -->
-        <svg viewBox="0 0 64 48" class="w-full h-full" fill="none">
-          <circle cx="20" cy="18" r="8" fill="#1c1b19" />
-          <circle cx="44" cy="18" r="8" fill="#1c1b19" />
-          <circle cx="20" cy="18" r="3" fill="#fefbeb" />
-          <circle cx="44" cy="18" r="3" fill="#fefbeb" />
-          <path d="M18 36 Q32 48 46 36" stroke="#1c1b19" stroke-width="4" fill="none" stroke-linecap="round" />
-        </svg>
-      </div>
+    <a href="/">
+      <img src="/icon.svg" alt="Prosper" class="w-[40px] h-[30px] md:w-[64px] md:h-[48px]" />
+    </a>
+
+    <!-- Mobile menu button -->
+    <button
+      id="menu-toggle"
+      class="md:hidden flex flex-col justify-center gap-[5px] w-[30px] h-[30px]"
+      aria-label="Toggle menu"
+    >
+      <span class="block w-full h-[3px] bg-dark transition-transform" id="bar1"></span>
+      <span class="block w-full h-[3px] bg-dark transition-opacity" id="bar2"></span>
+      <span class="block w-full h-[3px] bg-dark transition-transform" id="bar3"></span>
+    </button>
+
+    <!-- Desktop nav links -->
+    <div class="hidden md:flex items-center gap-[40px] lg:gap-[72px]">
+      <a href="#how-it-works" class="font-tight text-[18px] lg:text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">how it works</a>
+      <a href="#health-check" class="font-tight text-[18px] lg:text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">health check</a>
+      <a href="#who-we-help" class="font-tight text-[18px] lg:text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">who we help</a>
+      <a href="#about" class="font-tight text-[18px] lg:text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">about prosper</a>
+      <a href="#resources" class="font-tight text-[18px] lg:text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">resources</a>
     </div>
 
-    <!-- Nav links -->
-    <div class="flex items-center gap-[72px]">
-      <a href="#how-it-works" class="font-tight text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">how it works</a>
-      <a href="#health-check" class="font-tight text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">health check</a>
-      <a href="#who-we-help" class="font-tight text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">who we help</a>
-      <a href="#about" class="font-tight text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">about prosper</a>
-      <a href="#resources" class="font-tight text-[24px] text-dark uppercase leading-normal hover:opacity-70 transition-opacity">resources</a>
+    <div class="hidden md:block">
+      <Button label="BOOK A REVIEW" href="#book" />
     </div>
+  </div>
 
-    <Button label="BOOK A REVIEW" href="#book" />
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden flex-col gap-4 pt-6 pb-8">
+    <a href="#how-it-works" class="font-tight text-[20px] text-dark uppercase leading-normal">how it works</a>
+    <a href="#health-check" class="font-tight text-[20px] text-dark uppercase leading-normal">health check</a>
+    <a href="#who-we-help" class="font-tight text-[20px] text-dark uppercase leading-normal">who we help</a>
+    <a href="#about" class="font-tight text-[20px] text-dark uppercase leading-normal">about prosper</a>
+    <a href="#resources" class="font-tight text-[20px] text-dark uppercase leading-normal">resources</a>
+    <div class="pt-2">
+      <Button label="BOOK A REVIEW" href="#book" />
+    </div>
   </div>
 </nav>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+    menu?.classList.toggle('flex');
+  });
+</script>

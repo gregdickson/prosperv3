@@ -2,56 +2,56 @@
 import Button from "./Button.astro";
 ---
 
-<section class="max-w-[1440px] mx-auto px-[40px] mt-[100px]" id="health-check">
+<section class="max-w-[1440px] mx-auto px-5 md:px-[40px] mt-[60px] md:mt-[100px]" id="health-check">
   <!-- Top panel -->
-  <div class="bg-green rounded-[6px] px-[115px] py-[76px] text-center">
-    <h2 class="font-tight text-[96px] leading-[106px] uppercase text-dark mb-[94px]">
+  <div class="bg-green rounded-[6px] px-6 md:px-[60px] lg:px-[115px] py-[40px] md:py-[76px] text-center">
+    <h2 class="font-tight text-[36px] md:text-[64px] lg:text-[96px] leading-[1.1] uppercase text-dark mb-[40px] md:mb-[94px]">
       Small shifts,<br />big difference
     </h2>
-    <p class="font-tight text-[48px] leading-[55px] uppercase text-dark max-w-[1130px] mx-auto">
+    <p class="font-tight text-[22px] md:text-[36px] lg:text-[48px] leading-[1.15] uppercase text-dark max-w-[1130px] mx-auto">
       Two minutes now could make a big difference later. Our Health Check is a quick way to see whether your KiwiSaver is roughly on track, or whether it might be time for a proper look. It is fast, easy, and a good place to start if you want a better feel for where things are at.
     </p>
-    <div class="mt-[60px]">
+    <div class="mt-[40px] md:mt-[60px]">
       <Button label="CHECK MY FUND" href="#health-check" />
     </div>
   </div>
 
   <!-- Intro text -->
-  <div class="bg-cream border-[6px] border-dark rounded-[6px] px-[115px] py-[52px] text-center mt-[20px]">
-    <p class="font-tight text-[48px] leading-[66px] uppercase text-dark max-w-[1130px] mx-auto">
+  <div class="bg-cream border-[6px] border-dark rounded-[6px] px-6 md:px-[60px] lg:px-[115px] py-[30px] md:py-[52px] text-center mt-[20px]">
+    <p class="font-tight text-[22px] md:text-[36px] lg:text-[48px] leading-[1.35] uppercase text-dark max-w-[1130px] mx-auto">
       Let's have a look at 3% difference in annual returns on a $50,000 balance with 3.5% employee + 3.5% employer contributions over 20 years...
     </p>
   </div>
 
   <!-- Comparison cards -->
-  <div class="grid grid-cols-2 gap-[21px] mt-[20px]">
-    <div class="bg-white border-[6px] border-dark rounded-[6px] px-[55px] py-[86px]">
-      <p class="font-tight text-[36px] leading-[54px] uppercase text-dark mb-[86px]">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-[21px] mt-[20px]">
+    <div class="bg-white border-[6px] border-dark rounded-[6px] px-6 md:px-[55px] py-[40px] md:py-[86px]">
+      <p class="font-tight text-[22px] md:text-[28px] lg:text-[36px] leading-[1.5] uppercase text-dark mb-[40px] md:mb-[86px]">
         A POOR performing fund gets you:
       </p>
-      <p class="font-narrow text-[110px] leading-[55px] uppercase text-dark tracking-[-1.1px]">
+      <p class="font-narrow text-[56px] md:text-[80px] lg:text-[110px] leading-[1] uppercase text-dark tracking-[-1.1px]">
         $340,606
       </p>
     </div>
-    <div class="bg-white border-[6px] border-dark rounded-[6px] px-[55px] py-[86px]">
-      <p class="font-tight text-[36px] leading-[54px] uppercase text-dark mb-[86px]">
+    <div class="bg-white border-[6px] border-dark rounded-[6px] px-6 md:px-[55px] py-[40px] md:py-[86px]">
+      <p class="font-tight text-[22px] md:text-[28px] lg:text-[36px] leading-[1.5] uppercase text-dark mb-[40px] md:mb-[86px]">
         A TOP performing fund gets you:
       </p>
-      <p class="font-narrow text-[110px] leading-[55px] uppercase text-dark tracking-[-1.1px]">
+      <p class="font-narrow text-[56px] md:text-[80px] lg:text-[110px] leading-[1] uppercase text-dark tracking-[-1.1px]">
         $530,905
       </p>
     </div>
   </div>
 
   <!-- Difference highlight -->
-  <div class="bg-yellow rounded-[6px] px-[115px] py-[86px] text-center mt-[20px]">
-    <p class="font-narrow text-[110px] leading-[55px] uppercase text-dark tracking-[-1.1px] mb-[50px]">
+  <div class="bg-yellow rounded-[6px] px-6 md:px-[60px] lg:px-[115px] py-[40px] md:py-[86px] text-center mt-[20px]">
+    <p class="font-narrow text-[56px] md:text-[80px] lg:text-[110px] leading-[1] uppercase text-dark tracking-[-1.1px] mb-[30px] md:mb-[50px]">
       $190,000
     </p>
-    <p class="font-tight text-[48px] leading-[66px] uppercase text-dark max-w-[1130px] mx-auto">
+    <p class="font-tight text-[22px] md:text-[36px] lg:text-[48px] leading-[1.35] uppercase text-dark max-w-[1130px] mx-auto">
       Difference, just from being with the right fund and provider
     </p>
-    <p class="font-tight text-[16px] leading-[24px] uppercase text-dark/60 max-w-[1130px] mx-auto mt-[35px]">
+    <p class="font-tight text-[12px] md:text-[14px] lg:text-[16px] leading-[1.5] uppercase text-dark/60 max-w-[1130px] mx-auto mt-[20px] md:mt-[35px]">
       *Illustrative example based on a $50,000 starting balance, 3.5% employee + 3.5% employer contributions on a $70,000 salary, comparing 6% vs 9% average annual returns after fees, over 20 years. Actual results will vary.
     </p>
   </div>
