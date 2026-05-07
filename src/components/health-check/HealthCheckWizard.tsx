@@ -387,7 +387,7 @@ export default function HealthCheckWizard() {
   };
 
   return (
-    <div style={{ maxWidth: '640px', margin: '0 auto', fontFamily: font }}>
+    <div style={{ width: '100%', fontFamily: font }}>
       <StepIndicator current={step} />
 
       <div
