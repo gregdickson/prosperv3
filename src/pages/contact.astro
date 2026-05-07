@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Button from '../components/Button.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact — Prosper">
+  <Nav />
+
+  <!-- Hero -->
+  <section class="max-w-[1440px] mx-auto px-5 md:px-[40px] mt-[60px] md:mt-[100px] mb-[40px] md:mb-[60px]">
+    <div class="text-center max-w-[900px] mx-auto">
+      <h1 class="font-tight text-[40px] md:text-[64px] lg:text-[96px] leading-[1.1] uppercase text-dark mb-[20px] md:mb-[40px]">
+        Say g'day.
+      </h1>
+      <p class="font-tight text-[20px] md:text-[28px] lg:text-[36px] leading-[1.3] uppercase text-dark">
+        Whether you've got a question or you're ready for a proper KiwiSaver review — we'd love to hear from you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="max-w-[1440px] mx-auto px-5 md:px-[40px] mb-[60px] md:mb-[100px]">
+    <div class="bg-blue rounded-[6px] p-6 md:p-12 lg:p-16">
+      <div class="text-center mb-[40px]">
+        <h2 class="font-tight text-[36px] md:text-[48px] lg:text-[64px] leading-[1.1] uppercase text-dark mb-[16px]">
+          Book your free chat
+        </h2>
+        <p class="font-tight text-[20px] md:text-[24px] leading-[1.3] uppercase text-dark max-w-[600px] mx-auto">
+          Pick a time that works for you. No pressure, no jargon — just a straight-up conversation about your KiwiSaver.
+        </p>
+      </div>
+      <div class="bg-white rounded-[6px] p-4 md:p-6">
+        <iframe
+          src="https://tr.tilw.co.uk/widget/booking/ClcSvw6h2ncWLKSdGa1P"
+          style="width: 100%; min-height: 600px; border: none; overflow: hidden;"
+          scrolling="no"
+          title="Book a free KiwiSaver chat"
+        ></iframe>
+        <script src="https://tr.tilw.co.uk/js/form_embed.js" type="text/javascript"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Details -->
+  <section class="max-w-[1440px] mx-auto px-5 md:px-[40px] mb-[60px] md:mb-[100px]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px] md:gap-[40px]">
+      <!-- Email -->
+      <div class="bg-cream border-[3px] border-dark-alt rounded-[6px] p-6 md:p-10">
+        <h3 class="font-tight text-[28px] md:text-[36px] leading-[1.15] uppercase text-dark mb-[16px] md:mb-[24px]">
+          Email us
+        </h3>
+        <a href="mailto:hello@prosper.co.nz" class="font-tight text-[20px] md:text-[28px] leading-[1.3] uppercase text-dark hover:opacity-70 transition-opacity underline">
+          hello@prosper.co.nz
+        </a>
+      </div>
+
+      <!-- Phone -->
+      <div class="bg-cream border-[3px] border-dark-alt rounded-[6px] p-6 md:p-10">
+        <h3 class="font-tight text-[28px] md:text-[36px] leading-[1.15] uppercase text-dark mb-[16px] md:mb-[24px]">
+          Give us a call
+        </h3>
+        <a href="tel:+6421234567" class="font-tight text-[20px] md:text-[28px] leading-[1.3] uppercase text-dark hover:opacity-70 transition-opacity underline">
+          021 234 567
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-[1440px] mx-auto px-5 md:px-[40px] mb-[60px] md:mb-[100px]">
+    <div class="bg-pink rounded-[6px] px-6 md:px-[60px] lg:px-[115px] py-[40px] md:py-[76px] text-center">
+      <h2 class="font-tight text-[36px] md:text-[48px] lg:text-[64px] leading-[1.1] uppercase text-dark mb-[20px] md:mb-[40px]">
+        Not sure where to start?
+      </h2>
+      <p class="font-tight text-[20px] md:text-[28px] lg:text-[36px] leading-[1.3] uppercase text-dark max-w-[900px] mx-auto mb-[40px] md:mb-[60px]">
+        Try our free KiwiSaver health check — it takes two minutes and shows you exactly where you stand.
+      </p>
+      <Button label="Check my fund" href="/health-check" />
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
